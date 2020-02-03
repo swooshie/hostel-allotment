@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+.me {
+  background: linear-gradient(89deg, #00FFFF 100% , #EC63D1 100%);
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
