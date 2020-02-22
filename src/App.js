@@ -1,44 +1,49 @@
 import React, {Component} from 'react';
-import Particles from 'react-particles-js';
-import Navigation from './Components/Navigation';
+import Dashboard from './Components/Dashboard';
 import SignIn from './Components/SignIn';
 import Register from './Components/Register';
+
 import './App.css';
 
-const particlesOptions={
-  particles: {
-    number:{
-      value: 150,
-      density:{
-        enable: true,
-        value_area: 800
-      }
-    },
-    move: {
-      speed: 4
-    }
-  },
-  interactivity: {
-    onhover: {
-      enable: true,
-      mode: 'repulse',
-    },
-    detect_on: 'canvas'
-  },
-}
+
 
 class App extends Component{
+  constructor()
+  {
+    super();
+    this.state={
+      route:'signin',
+      isSignedIn:'false',
+    }
+  }
   
+  onRegister=(event)=>{
+    this.setState({route:'register'});
+  }
+
+  Back=(event)=>{
+    this.setState({route: 'signin'});
+  }
+
+  onSignIn=(event)=>{
+    this.setState({isSignedIn:'true'});
+  }
+
   render(){
       return (
         <div>
-          <Particles className='me'
-            params={particlesOptions} 
-          />
-          <Navigation />
-          <SignIn />
-          <Register />
-         </div> 
+          
+          {this.state.route==='signin'?
+            <div>
+            <SignIn onRegister={this.onRegister} onSignIn={this.onSignIn} />
+            {this.state.isSignedIn==='true'?console.log('hi')
+              :
+              console.log('hi')}
+            </div>
+            :
+            <Register Back={this.Back}/>
+          }
+         </div>  
       );
   };
 }
