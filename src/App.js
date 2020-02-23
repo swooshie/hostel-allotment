@@ -26,24 +26,23 @@ class App extends Component{
   }
 
   onSignIn=(event)=>{
-    this.setState({isSignedIn:'true'});
+    this.setState({route:'registered'});
   }
 
   render(){
       return (
-        <div>
-          
-          {this.state.route==='signin'?
-            <div>
-            <SignIn onRegister={this.onRegister} onSignIn={this.onSignIn} />
-            {this.state.isSignedIn==='true'?console.log('hi')
-              :
-              console.log('hi')}
-            </div>
+          <div>
+          {
+            this.state.route==='register'?  <Register Back={this.Back}/>
             :
-            <Register Back={this.Back}/>
-          }
-         </div>  
+              this.state.route==='registered'? <Dashboard />
+            :
+              <SignIn onRegister={this.onRegister} onSignIn={this.onSignIn} />
+            }
+           
+          </div>
+            
+          
       );
   };
 }

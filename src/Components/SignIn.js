@@ -46,10 +46,6 @@ class SignIn extends React.Component {
 		this.setState({password:event.target.value});
 	}
 
-	onSuccessfull=(event)=>{
-		this.props.onSignIn();
-	}
-
 	checkUser=(event)=>{
 		var flag=0;
 		// console.log(database.users[0].username);
