@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link,BrowserRouter as Router } from 'react-router-dom';
 import database from './users';
 import Particles from 'react-particles-js';
 import './SignIn.css';
@@ -73,6 +74,7 @@ class SignIn extends React.Component {
 
 	render(){
 		return(
+      <Router>
 			<div>
 				<Particles className='me particles'
             params={particlesOptions} 
@@ -93,14 +95,17 @@ class SignIn extends React.Component {
       			      </div>
       			    </fieldset>
       			    <div className="flex justify-around">
-      			      <input onClick={this.checkUser} className="b ph3 pv2 white input-reset ba b--white-20 bg-transparent grow pointer f4 dib" type="submit" value="Sign in" />
-      			    	<input onClick={this.props.onRegister} className="b ph3 pv2 white input-reset ba b--white-20 bg-transparent grow pointer f4 dib" type="submit" value="Register" />
+                  <Link to="/dashboard">
+      			       <input onClick={this.checkUser} className="b ph3 pv2 white input-reset ba b--white-20 bg-transparent grow pointer f4 dib" type="submit" value="Sign in" />
+      			    	</Link>
+                  <input onClick={this.props.onRegister} className="b ph3 pv2 white input-reset ba b--white-20 bg-transparent grow pointer f4 dib" type="submit" value="Register" />
       			    </div>
       			  </div>
       			</main>
       			</article>
       		</div>
       </div>
+      </Router>
 		);
 	}
 }
