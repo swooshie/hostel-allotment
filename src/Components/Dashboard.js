@@ -4,6 +4,7 @@ import './dashboard.css';
 import Home from './Home';
 import Layout from './Layout';
 import Notifications from './Notifications';
+import Groups from './Groups';
 
 class Dashboard extends React.Component{
 	render()
@@ -32,7 +33,7 @@ class Dashboard extends React.Component{
 			      <button className="ptr db fw6 lh-copy f3 white navito b--transparent ">Notifications </button>
 			    </Link>
 			    <br></br>
-			    <Link to="/layout" >
+			    <Link to="/groups" >
 			      <button className="ptr db fw6 lh-copy white f3 navito b--transparent ">Groups   </button>
 			    </Link> 
 			    
@@ -44,6 +45,7 @@ class Dashboard extends React.Component{
 				  	<Route path="/layout" exact component={Layout}/>
 				  	<Route path="/notifications" exact component={Notifications}/>
 				  	<Route path="/dashboard" component={Home}/>
+				  	<Route path="/groups" component={Groups}/>
 			  	</Switch>
 			  
 			  
