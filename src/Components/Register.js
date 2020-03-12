@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import database from './users';
+import database from './Data/users';
 import Particles from 'react-particles-js';
 
 const particlesOptions={

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import CardList from './CardList';
-import { groups } from './GroupList';
-import SearchBox from './SearchBox';
+import CardList from '../CardList/CardList';
+import { groups } from '../Data/GroupList';
+import SearchBox from '../SearchBox';
 
 class Group extends Component{
 	constructor()

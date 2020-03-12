@@ -1,10 +1,10 @@
 import React from 'react';
 import {Switch,Link,Route,BrowserRouter as Router} from 'react-router-dom';
 import './dashboard.css';
-import Home from './Home';
-import Layout from './Layout';
-import Notifications from './Notifications';
-import Groups from './Groups';
+import Home from '../Home/Home';
+import Layout from '../Layout/Layout';
+import Notifications from '../Notifications/Notifications';
+import Groups from '../Groups/Groups';
 
 class Dashboard extends React.Component{
 	render()
