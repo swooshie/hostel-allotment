@@ -65,6 +65,11 @@ class Register extends Component{
 			password: this.state.password,
 			});
 			console.log(database.users);
+			this.props.Back();
+		}
+		else
+		{
+			alert("Passwords don't match!");
 		}
 	}
 	render(){
