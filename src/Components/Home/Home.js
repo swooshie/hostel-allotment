@@ -8,9 +8,9 @@ class Home extends Component{
 			<div>
 				<legend className="f1 fw6 ph0 mh0 just">Hello...<br></br> Find your new home.</legend>
 				<legend className="f4 fw6 ph0 mh0 justifyNobackg"><br></br>Choose your role:group leader/member<br></br></legend>
-				
+				<br></br><br></br><br></br><br></br>
 				<center>
-				<img src='https://prsoundpost.files.wordpress.com/2015/05/superhero-leader-jpg.jpg' className="imgleader "/ > 
+				 <input type="button" onclick={this.learder} className="imgleader" />
 				<img src='https://katemunden.com/wp-content/uploads/2015/05/Group-Avatar-2.png' className="imgleader "/ > 
 				</center>
 				
