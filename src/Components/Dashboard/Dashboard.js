@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form }from 'react-bootstrap';
 import {Switch,Link,Route,BrowserRouter as Router} from 'react-router-dom';
 import './dashboard.css';
 import Home from '../Home/Home';
@@ -18,8 +19,11 @@ class Dashboard extends React.Component{
 			  <nav className="navbar navbar-dark navito">
 			    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
 			      <span className="navbar-toggler-icon"></span>
-			      <span className="ht">Menu</span>
 			    </button>
+			    <Form inline>
+			    <label className="ptr db fw6 lh-copy white f3 navito b--transparent justify-content-end">{this.props.username}</label>
+			    <button className="ptr db fw6 lh-copy white f3 navito b--transparent ">Logout</button>
+			  	</Form>
 			  </nav>
 			<div className="pos-f-t">
 			  <div className="collapse" id="navbarToggleExternalContent">

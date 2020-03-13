@@ -31,6 +31,6 @@
 	background-color: #c0c1c2;
 }
 
-.ht{
-	float:right;
+.jus{
+	justify-content: space-around;
 }

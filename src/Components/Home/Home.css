@@ -1,7 +1,7 @@
 .imgleader {
 	width :250px;
 	height :250px;
-	background-image: url ('../image/leader.jpg') no-repeat;
+	 border-radius: 50%;
     cursor:pointer;
 }
 .justifyNobackg{

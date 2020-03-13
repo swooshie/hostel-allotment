@@ -1,0 +1,9 @@
+.dd{
+	height:50px;
+	width:208px;
+}
+
+.ht{
+	height: auto;
+object-fit:cover; 
+}
