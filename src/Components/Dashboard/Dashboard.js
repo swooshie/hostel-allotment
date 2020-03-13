@@ -7,6 +7,9 @@ import Notifications from '../Notifications/Notifications';
 import Groups from '../Groups/Groups';
 
 class Dashboard extends React.Component{
+	printUsername=()=>{
+		console.log('hi this is',this.props.username);
+	}
 	render()
 	{
 		return(
@@ -15,6 +18,7 @@ class Dashboard extends React.Component{
 			  <nav className="navbar navbar-dark navito">
 			    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
 			      <span className="navbar-toggler-icon"></span>
+			      <span className="ht">Menu</span>
 			    </button>
 			  </nav>
 			<div className="pos-f-t">
@@ -34,9 +38,8 @@ class Dashboard extends React.Component{
 			    </Link>
 			    <br></br>
 			    <Link to="/groups" >
-			      <button className="ptr db fw6 lh-copy white f3 navito b--transparent ">Groups   </button>
-			    </Link> 
-			    
+			      <button onClick={this.printUsername()} className="ptr db fw6 lh-copy white f3 navito b--transparent ">Groups   </button>
+			    </Link>
 			    </div>
 			  </div>
 			 

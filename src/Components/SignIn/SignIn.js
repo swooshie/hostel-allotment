@@ -57,6 +57,7 @@ class SignIn extends React.Component {
 				if(database.users[i].password===this.state.password)
 				{
 					flag=1;
+          this.props.giveUsername(database.users[i].username);
 					this.props.onSignIn();
 				}
 			}

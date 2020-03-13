@@ -14,6 +14,7 @@ class App extends Component{
     this.state={
       route:'signin',
       isSignedIn:'false',
+      username:'',
     }
   }
   
@@ -29,16 +30,20 @@ class App extends Component{
     this.setState({route:'registered'});
   }
 
+  giveUsername=(user)=>{
+    this.setState({username:user});
+  }
+
   render(){
       return (
           <div>
           {
             this.state.route==='register'?  <Register Back={this.Back}/>
             :
-              this.state.route==='registered'? <Dashboard />
+              this.state.route==='registered'? <Dashboard username={this.state.username}/>
             :
-              <SignIn onRegister={this.onRegister} onSignIn={this.onSignIn} />
-            }
+              <SignIn onRegister={this.onRegister} onSignIn={this.onSignIn} giveUsername={this.giveUsername}/>
+          }
            
           </div>
           
