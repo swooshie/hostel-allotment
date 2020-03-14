@@ -31,7 +31,7 @@ class Group extends Component{
 			return(
 				<div className='tc'>
 				<h1 className={`f1 tc`}>Groups</h1>
-				<SearchBox searchChange={ this.onSearchChange }/>
+				<span class="glyphicon glyphicon-name"></span><SearchBox searchChange={ this.onSearchChange }/>
 				<CardList groups = { filteredGroups }/>
 				</div>
 		);

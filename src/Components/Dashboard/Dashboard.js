@@ -38,7 +38,7 @@ class Dashboard extends React.Component{
 			    </Link>
 			    <br></br>
 			    <Link to="/notifications" >
-			      <button className="ptr db fw6 lh-copy f3 white navito b--transparent ">Notifications </button>
+			      <button className="ptr db fw6 lh-copy f3 white navito b--transparent ">Notifications<span class="badge badge-pill badge-dark">4</span> </button>
 			    </Link>
 			    <br></br>
 			    <Link to="/groups" >

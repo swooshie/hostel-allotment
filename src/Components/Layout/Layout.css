@@ -7,3 +7,33 @@
 	height: auto;
 object-fit:cover; 
 }
+.washroom{
+	height:100px;
+	width:100px;
+	background-color: darkgray;
+}
+.wingleft{
+	height:100px;
+	width:250px;
+	background-color: #625075;
+}
+.wingright{
+	height:100px;
+	width:250px;
+	background-color: #846c9e;
+}
+.wingsidetop{
+	height:250px;
+	width:100px;
+	background-color: #78bfb4;
+}
+.wingsidebottom{
+	height:250px;
+	width:100px;
+	background-color: #96ebdd;
+}
+.qt{
+	height:250px;
+	width:500px;
+	background-color:lightgreen;
+}

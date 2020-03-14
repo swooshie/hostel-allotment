@@ -6,6 +6,7 @@ const SearchBox = ({searchChange}) =>{
 		  <input 
 		  	className = 'pa3 ba b--green bg-white tc'
 		  	type = 'search' 
+
 		  	placeholder = 'Search a Group' 
 		  	onChange = {searchChange}
 		  />
