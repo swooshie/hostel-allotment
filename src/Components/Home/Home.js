@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import '../Data/users';
 import './Home.css';
+import Member from './Photos/Member.png';
+import Leader from './Photos/Leader.png';
 
 class Home extends Component{
 	hist=()=>{
@@ -14,11 +16,11 @@ class Home extends Component{
 				<br></br>
 				<center>
 				<figure class="figure">
-				  <img src="https://cdn.lynda.com/course/160362/160362-637163430552329914-16x9.jpg" class="imgleader hi" onClick={this.hist} />
+				  <img src={Leader} class="imgleader hi" onClick={this.hist} />
 				  <figcaption class="figure-caption f4">Leader</figcaption>
 				</figure>
 				<figure class="figure">
-				  <img src="https://katemunden.com/wp-content/uploads/2015/05/Group-Avatar-2.png" class="imgleader hi" onClick={this.hist} />
+				  <img src={Member} class="imgleader hi" onClick={this.hist} />
 				  <figcaption class="figure-caption f4">Group Member</figcaption>
 				</figure>
 				
