@@ -35,55 +35,71 @@ class Slide extends Component{
 				      <div class="carousel-item active">
 				       <Link to="/meera" >
 				        <img src={MeeraB} class="d-block ht w-100" />
-				        </Link> 
+				       </Link> 
 				        <div class="carousel-caption d-none d-md-block">
 				          <h5 >Meera Bhawan</h5>		         
 				        </div>
 				      </div>
-				      <div class="carousel-item">		      
+				      <div class="carousel-item">
+				      <Link to="/Vyas" >		      
 				        <img src={Vyas} class="d-block ht w-100" alt="..."/>
+				      </Link>
 				        <div class="carousel-caption d-none d-md-block">
 				          <h5>Vyas Bhavan</h5>
 				        </div>
 				      </div>
 				      <div class="carousel-item">
-				        <img src={Gautam} class="d-block ht w-100" alt="..."/>
+				      <Link to='/Gautam'>
+				        <img src={Gautam} class="d-block ht w-100" alt="..."/> 
+				      </Link>
 				        <div class="carousel-caption d-none d-md-block">
 				          <h5>Gautam Bhavan</h5>		         
 				        </div>
 				      </div>
 				      <div class="carousel-item">
+				      <Link to='/Gandhi'>
 				        <img src={Gandhi} class="d-block ht w-100" alt="..."/>
+				      </Link>
 				        <div class="carousel-caption d-none d-md-block">
 				          <h5>Gandhi Bhavan</h5>		  
 				        </div>
 				      </div>
 				      <div class="carousel-item">
+				      <Link to='/Shankar'>
 				        <img src={Shankar} class="d-block ht w-100" alt="..."/>
+				      </Link>
 				        <div class="carousel-caption d-none d-md-block">
 				          <h5>Shankar Bhavan</h5>		  
 				        </div>
 				      </div>
 				      <div class="carousel-item">
+				      <Link to='/Krishna'>
 				        <img src={Krishna} class="d-block ht w-100" alt="..."/>
+				      </Link>
 				        <div class="carousel-caption d-none d-md-block">
 				          <h5>Krishna Bhavan</h5>		  
 				        </div>
 				      </div>
 				      <div class="carousel-item">
+				      <Link to='/Valmiki'>
 				        <img src={Valmiki} class="d-block ht w-100" alt="..."/>
+				      </Link>
 				        <div class="carousel-caption d-none d-md-block">
 				          <h5>Valmiki Bhavan</h5>		  
 				        </div>
 				      </div>
 				       <div class="carousel-item">
+				       <Link to='/Malviya'>
 				        <img src={Malviya} class="d-block ht w-100" alt="..."/>
+				      </Link>
 				        <div class="carousel-caption d-none d-md-block">
 				          <h5>Malaviya Bhavan</h5>		  
 				        </div>
 				      </div>
 				       <div class="carousel-item">
+				       <Link to='/VK'>
 				        <img src={VK} class="d-block ht w-100" alt="..."/>
+				      </Link>
 				        <div class="carousel-caption d-none d-md-block">
 				          <h5>Vishwakarma Bhavan</h5>		  
 				        </div>
@@ -100,7 +116,17 @@ class Slide extends Component{
 			    </a>
 			  </div>
 			  	<Switch>
-						<Route path="/meera" exact component={Meera}/>			  	
+						<Route path="/meera" exact component={Meera}/>
+						<Route path="/Vyas" exact component={Meera}/>
+						<Route path="/Gautam" exact component={Meera}/>
+						<Route path="/Gandhi" exact component={Meera}/>
+						<Route path="/Shankar" exact component={Meera}/>
+						<Route path="/Krishna" exact component={Meera}/>
+						<Route path="/Valmiki" exact component={Meera}/>
+						<Route path="/Malviya" exact component={Meera}/>
+						<Route path="/VK" exact component={Meera}/>
+
+
 				</Switch>
 			</div>
 		</center>		

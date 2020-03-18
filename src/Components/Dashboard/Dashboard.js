@@ -30,19 +30,19 @@ class Dashboard extends React.Component{
 			    <div className=" p-4 navito">
 			    <br></br>
 			    <Link to="/dashboard" >
-			      <button className="ptr db fw6 lh-copy white f3 navito b--transparent ">Home   </button>
+			      <button className="ptr db fw6 lh-copy white f3 navito b--transparent navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">Home   </button>
 			    </Link> 
 			    <br></br>
 			    <Link to="/layout" >
-			      <button className="ptr db fw6 lh-copy f3 white navito b--transparent ">Layout </button>
+			      <button className="ptr db fw6 lh-copy white f3 navito b--transparent navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">Layout </button>
 			    </Link>
 			    <br></br>
 			    <Link to="/notifications" >
-			      <button className="ptr db fw6 lh-copy f3 white navito b--transparent ">Notifications<span class="badge badge-pill badge-dark">4</span> </button>
+			      <button className="ptr db fw6 lh-copy white f3 navito b--transparent navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">Notifications<span class="badge badge-pill badge-dark">4</span> </button>
 			    </Link>
 			    <br></br>
 			    <Link to="/groups" >
-			      <button onClick={this.printUsername()} className="ptr db fw6 lh-copy white f3 navito b--transparent ">Groups   </button>
+			      <button onClick={this.printUsername()} className="ptr db fw6 lh-copy white f3 navito b--transparent navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">Groups   </button>
 			    </Link>
 			    </div>
 			  </div>
