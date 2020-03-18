@@ -34,3 +34,7 @@
 .jus{
 	justify-content: space-around;
 }
+.flex-user{
+ display: flex;
+	justify-content: space-around;
+}
