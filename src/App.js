@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Dashboard from './Components/Dashboard/Dashboard';
-import SignIn from './Components/SignIn/SignIn';
+import SignIn from './Components/SignIn';
 import Register from './Components/Register';
 
 import './App.css';

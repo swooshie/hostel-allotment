@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link,BrowserRouter as Router } from 'react-router-dom';
-import database from '../Data/users';
+import database from './Data/users';
 import Particles from 'react-particles-js';
 import './SignIn.css';
-
+// import API from '../Utils/API';
+// const {Users} = require('.../models/Users');
 
 const particlesOptions={
   particles: {
@@ -48,29 +49,24 @@ class SignIn extends React.Component {
 	}
 
 	checkUser=(event)=>{
-		var flag=0;
-		// console.log(database.users[0].username);
-		for(var i=0;i<database.users.length;i++)
-		{
-			if(database.users[i].username===this.state.username)
-			{
-				if(database.users[i].password===this.state.password)
-				{
-					flag=1;
-          this.props.giveUsername(database.users[i].username);
-					this.props.onSignIn();
-				}
-			}
-		}
-		if(flag===0)
-		{
-			alert('Incorrect combination');
-			
-		}
-
-		/*
-				Abhi doosre page pe bhejna baaki hai agle sprint mein karenge! Samjha??
-		*/
+    fetch('http://localhost:5000/signIn',{
+      method:'post',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        username: this.state.username,
+        password: this.state.password
+      })
+    })
+    .then((res)=>res.json())
+      .then((res)=>{
+        if(res.name!==undefined){
+          this.props.giveUsername(this.state.username);
+          this.props.onSignIn();
+        }
+        else
+          alert('Incorrect combination');
+        // console.log(res);
+      }).catch((err)=>console.log(err));
 	}
 
 	render(){

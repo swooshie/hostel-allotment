@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import database from './Data/users';
 import Particles from 'react-particles-js';
 
 const particlesOptions={
@@ -58,19 +57,31 @@ class Register extends Component{
 	joinUser=(event)=>{
 		if(this.state.password===this.state.reenter)
 		{
-			database.users.push({
-			name: this.state.name,
-			username: this.state.username,
-			email: this.state.email,
-			password: this.state.password,
-			});
-			console.log(database.users);
-			this.props.Back();
+			fetch('http://localhost:5000/register',{
+      method:'post',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        username: this.state.username,
+        password: this.state.password,
+        name:this.state.name,
+        email:this.state.email,
+        leader:false,
+        member:false,
+      })
+    })
+    .then((res)=>res.json())
+      .then((res)=>{
+      	console.log(res);
+        if(res.name!==undefined){
+          alert('New user created!');
+          this.props.Back();
+        }
+        else
+          alert('Incorrect combination');
+      }).catch((err)=>console.log(err));
 		}
 		else
-		{
 			alert("Passwords don't match!");
-		}
 	}
 	render(){
 		return(
