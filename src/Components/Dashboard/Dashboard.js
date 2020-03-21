@@ -7,9 +7,13 @@ import Layout from '../Layout/Layout';
 import Notifications from '../Notifications/Notifications';
 import Groups from '../Groups/Groups';
 
+var name=" ";
+
 class Dashboard extends React.Component{
-	printUsername=()=>{
-		console.log('hi this is',this.props.username);
+	componentDidMount()
+	{
+		name=this.props.username;
+		console.log('Dashboard mein, username is',name);
 	}
 	render()
 	{
@@ -42,16 +46,15 @@ class Dashboard extends React.Component{
 			    </Link>
 			    <br></br>
 			    <Link to="/groups" >
-			      <button onClick={this.printUsername()} className="ptr db fw6 lh-copy white f3 navito b--transparent navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">Groups   </button>
+			      <button className="ptr db fw6 lh-copy white f3 navito b--transparent navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">Groups   </button>
 			    </Link>
 			    </div>
 			  </div>
-			 
 			  
 			  	<Switch>
 				  	<Route path="/layout" exact component={Layout}/>
 				  	<Route path="/notifications" exact component={Notifications}/>
-				  	<Route path="/dashboard" component={Home}/>
+				  	<Route path="/dashboard" render={(props) => <Home {...props} username={this.props.username} />} />
 				  	<Route path="/groups" component={Groups}/>
 			  	</Switch>
 			  
@@ -62,4 +65,4 @@ class Dashboard extends React.Component{
 	}
 }
 
-export default Dashboard;
+export default Dashboard

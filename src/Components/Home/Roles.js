@@ -2,9 +2,54 @@ import React from 'react';
 import Member from './Photos/Member.png';
 import Leader from './Photos/Leader.png';
 
+var username='';
+
 class Roles extends React.Component{
-	hist=()=>{
-		console.log('hi');
+	constructor()
+	  {
+	    super();
+	    this.state={
+	      username:'',
+	    }
+	  }
+
+	 async setLeader(event){
+	 	console.log('username is',username);
+	  await fetch('http://localhost:5000/setLeader',{
+      method:'post',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        username:username
+      })
+    }).then(res=>res.json())
+      .then((res)=>{
+        console.log(res);
+        console.log('hello');
+      })
+      .catch(err=>console.log);
+	}	
+
+	async setMember(event){
+	 	console.log('username is',username);
+	  await fetch('http://localhost:5000/setMember',{
+      method:'post',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        username:username
+      })
+    }).then(res=>res.json())
+      .then((res)=>{
+        console.log(res);
+        console.log('hello');
+      })
+      .catch(err=>console.log);
+	}
+
+	componentDidMount(){
+		console.log('Username is',this.props.username)
+		console.log('Role is',this.props.role)
+		this.setState({username:this.props.username});
+		username=this.props.username;
 	}
 	render()
 	{
@@ -15,11 +60,11 @@ class Roles extends React.Component{
 					<br></br>
 				<center>
 					<figure class="figure">
-					  <img src={Leader} class="imgleader hi" onClick={this.hist} />
+					  <img onClick={this.setLeader} src={Leader} class="imgleader hi"/>
 					  <figcaption class="figure-caption f4">Leader</figcaption>
 					</figure>
 					<figure class="figure">
-					  <img src={Member} class="imgleader hi" onClick={this.hist} />
+					  <img onClick={this.setMember} src={Member} class="imgleader hi"/>
 					  <figcaption class="figure-caption f4">Group Member</figcaption>
 					</figure>
 				</center>

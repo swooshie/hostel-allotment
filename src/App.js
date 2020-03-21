@@ -15,9 +15,13 @@ class App extends Component{
       route:'signin',
       isSignedIn:'false',
       username:'',
+      role:'',
     }
   }
-  
+  componentDidMount(){
+    
+  }
+
   onRegister=(event)=>{
     this.setState({route:'register'});
   }
@@ -40,7 +44,7 @@ class App extends Component{
           {
             this.state.route==='register'?  <Register Back={this.Back}/>
             :
-              this.state.route==='registered'? <Dashboard username={this.state.username}/>
+              this.state.route==='registered'? <Dashboard username={this.state.username} />
             :
               <SignIn onRegister={this.onRegister} onSignIn={this.onSignIn} giveUsername={this.giveUsername}/>
           }

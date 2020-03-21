@@ -72,13 +72,19 @@ class Register extends Component{
     .then((res)=>res.json())
       .then((res)=>{
       	console.log(res);
+      	if(res.error.code===11000){
+      		alert('Username Already exists!!');
+      		return;
+      	}
         if(res.name!==undefined){
           alert('New user created!');
           this.props.Back();
         }
         else
           alert('Incorrect combination');
-      }).catch((err)=>console.log(err));
+      }).catch((err)=>{
+      			console.log(err);	
+      	});
 		}
 		else
 			alert("Passwords don't match!");
