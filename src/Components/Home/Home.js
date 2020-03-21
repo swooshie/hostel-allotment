@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import Profile from './Profile';
 import './Home.css';
 import Roles from './Roles.js';
 
@@ -42,7 +42,7 @@ class Home extends Component{
 						if(this.state.role==='none')
 							return <Roles username={this.props.username} role={this.state.role}/>
 						else
-							return <h1>hi</h1>
+							return <Profile />
 					})()
 				}
 			</div>
