@@ -42,7 +42,7 @@ class Home extends Component{
 						if(this.state.role==='none')
 							return <Roles username={this.props.username} role={this.state.role}/>
 						else
-							return <Profile />
+							return <Profile username={this.props.username} role={this.state.role}/>
 					})()
 				}
 			</div>
