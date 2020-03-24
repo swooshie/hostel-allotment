@@ -2,22 +2,37 @@ import React, { Component } from 'react';
 import CardList from '../CardList/CardList';
 import { groups } from '../Data/GroupList';
 import SearchBox from '../SearchBox';
+import axios from'axios';
 
 class Group extends Component{
 	constructor()
 	{
 		super();
 		this.state ={
-			grps:groups,
-			searchField:''
+			grps:[],
+			searchField:'',
+			users:[]
 		}
 	}
 
-	// componentDidMount(){
-	// 	fetch('http://jsonplaceholder.typicode.com/users')
-	// 	.then(response=>response.json())
-	// 	.then(users=>this.setState({ robots:users}));
-	// }
+	 componentDidMount(){
+		axios.get('http://localhost:5000/getGroup')
+	 	.then(response => {
+	 		this.setState({grps : response.data});
+	 		console.log(response.data);
+	 	})
+	 	.catch(function(err) {
+	 		console.log(err);
+	 	});
+	 	axios.get('http://localhost:5000/getUsers')
+	 	.then(response => {
+	 		this.setState({users : response.data});
+	 	})
+	 	.catch(function(err) {
+	 		console.log(err);
+	 	});
+
+	 }
 
 	onSearchChange = (event) =>{
 		this.setState({ searchField: event.target.value});
@@ -32,7 +47,9 @@ class Group extends Component{
 				<div className='tc'>
 				<h1 className={`f1 tc`}>Groups</h1>
 				<span class="glyphicon glyphicon-name"></span><SearchBox searchChange={ this.onSearchChange }/>
-				<CardList groups = { filteredGroups }/>
+				<CardList groups = { filteredGroups } 
+						  members ={this.state.users}
+						 />
 				</div>
 		);
 	}
