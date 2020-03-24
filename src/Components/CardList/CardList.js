@@ -1,13 +1,23 @@
 import React from 'react';
 import Card from '../Card/Card';
 
-const CardList = ( {groups} ) =>
+const CardList = ( {groups , members} ) =>
 {
 	const cardArray = groups.map((user,i) => {
+    const trial = user.gname;
+    const getMembers = members.filter(mem=>{
+       if(trial === mem.group)
+		{
+            	return mem;
+        }
+    })
+    
+    console.log({getMembers})
 		return (
 			<Card 
 				key={groups[i].grpid} 
 				name={groups[i].gname}
+				member={getMembers}
 				/>);
 	});
 	return(
