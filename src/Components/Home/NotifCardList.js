@@ -6,8 +6,8 @@ const NotifCardList = ( {groups} ) =>
 	const cardArray = groups.map((grp,i) => {
 		return (
 			<NotifCard 
-				fromgname={groups[i].fromgname} 
-				tousername={groups[i].tousername}
+				fromgname={grp.fromgname} 
+				tousername={grp.tousername}
 				/>
 		);
 	});

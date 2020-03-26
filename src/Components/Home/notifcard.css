@@ -1,3 +1,9 @@
 .cardbg{
-	background-color: #00b3b3;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.style{
+	background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg)
 }

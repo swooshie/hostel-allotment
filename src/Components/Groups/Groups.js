@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CardList from '../CardList/CardList';
 import { groups } from '../Data/GroupList';
 import SearchBox from '../SearchBox';
-import axios from'axios';
+import axios from 'axios';
 
 class Group extends Component{
 	constructor()
@@ -31,6 +31,13 @@ class Group extends Component{
 	 	.catch(function(err) {
 	 		console.log(err);
 	 	});
+
+	 	 const script = document.createElement("script");
+
+    script.src = "./index.js";
+    script.async = true;
+
+    document.body.appendChild(script);
 
 	 }
 
