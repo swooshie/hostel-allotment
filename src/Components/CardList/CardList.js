@@ -7,12 +7,10 @@ const CardList = ( {groups , members} ) =>
     const trial = user.gname;
     const getMembers = members.filter(mem=>{
        if(trial === mem.group)
-		{
-            	return mem;
-        }
+          return mem;
     })
     
-    console.log({getMembers})
+    // console.log({getMembers})
 		return (
 			<Card 
 				key={groups[i].grpid} 
