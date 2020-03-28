@@ -128,7 +128,7 @@
     bottom: 0;
     left: 0;
     background-color: #FFF;
-    height: 100px;
+    height: 120px;
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
@@ -141,6 +141,6 @@
 }
 
 .user-info > span {
-  color: #262626;
+  color: #134ca3;
   font-size: 16px;
 }

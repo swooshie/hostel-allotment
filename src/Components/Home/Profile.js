@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Profile.css';
+
 class Profile extends Component {
 	render(){
 		return(
@@ -8,7 +9,7 @@ class Profile extends Component {
 			
 				  <div class="container ">
   <div class="img-container">
-    <img src="https://images.unsplash.com/photo-1534809027769-b00d750a6bac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" alt=""/>
+    <img src="https://images.unsplash.com/photo-1534809027769-b00d750a6bac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" alt="user photo"/>
   </div>
   <ul class="social-media">
 			<li><a href="#"><img src="https://img.favpng.com/12/7/24/camera-computer-icons-photography-clip-art-png-favpng-h9NT6hWXTrMZXnnmsUNXr2T0T.jpg" class="imagesize img " /><i class="fa "></i></a></li>
@@ -18,8 +19,9 @@ class Profile extends Component {
 			
 		</ul>
 		<div class="user-info">
-			<h2>Username</h2>
-      <span>email id</span>
+			<h2>{this.props.username}</h2>
+      		<span>{this.props.email}</span><br />
+			<h5>{this.props.role}</h5>
 		</div>
 </div>
 

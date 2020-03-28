@@ -9,6 +9,7 @@ class Home extends Component{
     super();
     this.state={
       role:'',
+      email:''
     }
   }
 	async componentDidMount(){
@@ -17,7 +18,8 @@ class Home extends Component{
       method:'post',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({
-        username: this.props.username
+        username: this.props.username,
+        email: this.props.email
       })
     }).then((res)=>res.json())
       .then(res=>{
@@ -28,7 +30,10 @@ class Home extends Component{
             this.setState({role:'member'})
           else
             this.setState({role:'none'})
-        console.log('checkRole is',this.state.role)  
+        this.setState({
+          email: res.email
+        })
+        console.log('checkRole is',this.state.role, 'and his email is ', res.email)  
       })
       .catch(err=>console.log);
 	}
@@ -42,7 +47,7 @@ class Home extends Component{
 						if(this.state.role==='none')
 							return <Roles username={this.props.username} role={this.state.role}/>
 						else
-							return <Profile username={this.props.username} role={this.state.role}/>
+							return <Profile username={this.props.username} email={this.state.email} role={this.state.role} />
 					})()
 				}
 			</div>
