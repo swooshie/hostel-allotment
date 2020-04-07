@@ -1,0 +1,10 @@
+[
+    {
+        "name": "dummy",
+        "username": "dummy",
+        "email": "dummy@dum.net",
+        "password": "dummy",
+        "leader": false,
+        "member": false
+    }
+]

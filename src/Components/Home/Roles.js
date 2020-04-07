@@ -70,11 +70,11 @@ class Roles extends React.Component{
 						<br></br>
 					<center>
 						<figure class="figure">
-						  <img onClick={this.setLeader} src={Leader} class="imgleader hi"/>
+						  <img onClick={this.setLeader} src={Leader} class="imgleader hi" alt="Leader" />
 						  <figcaption class="figure-caption f4">Leader</figcaption>
 						</figure>
 						<figure class="figure">
-						  <img onClick={this.setMember} src={Member} class="imgleader hi"/>
+						  <img onClick={this.setMember} src={Member} class="imgleader hi" alt="Member" />
 						  <figcaption class="figure-caption f4">Group Member</figcaption>
 						</figure>
 					</center>

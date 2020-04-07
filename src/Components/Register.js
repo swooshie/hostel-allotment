@@ -103,7 +103,7 @@ class Register extends Component{
 			      <legend className="f1 fw6 ph0 mh0">Sign In</legend>
 			      <div className="mt3">
 			        <label className="db fw6 lh-copy f3" for="username">Name</label>
-			        <input onChange={this.onNameChange} className="pa2 b--white-20 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="username"  id="username" />
+			        <input onChange={this.onNameChange} className="pa2 b--white-20 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="name"  id="username" />
 			      </div>
 			       <div className="mt3">
 			        <label className="db fw6 lh-copy f3" for="username">Username</label>
@@ -111,7 +111,7 @@ class Register extends Component{
 			      </div>
 			       <div className="mt3">
 			        <label className="db fw6 lh-copy f3" for="username">Email</label>
-			        <input onChange={this.onEmailChange} className="pa2 b--white-20 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="username"  id="username" />
+			        <input onChange={this.onEmailChange} className="pa2 b--white-20 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="email"  id="username" />
 			      </div>
 			      <div className="mv3">
 			        <label className="db fw6 lh-copy f3" for="password">Password</label>
@@ -119,7 +119,7 @@ class Register extends Component{
 			      </div>
 			       <div className="mt3">
 			        <label className="db fw6 lh-copy f3" for="username">Re Enter Password</label>
-			        <input onChange={this.onReEnter} className="pa2 b--white-20 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="username"  id="username" />
+			        <input onChange={this.onReEnter} className="pa2 b--white-20 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="re-password"  id="username" />
 			      </div>
 			    </fieldset>
 			    <div className="flex justify-around">
@@ -135,3 +135,5 @@ class Register extends Component{
 	}
 }
 export default Register;
+
+//here
