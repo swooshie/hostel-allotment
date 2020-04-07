@@ -86,41 +86,6 @@ describe('Sign In user and Log Out',function(){
     })
 })
 
-describe('Sign In and select the role',function(){
-    beforeEach(function(){
-        cy.server();
-            cy.route({
-                method: "POST",
-                url: "/signIn",
-                response:"fixture:sign-users.json"
-        })
-    })
-
-    it('successfully loads the sign in page', function(){
-        cy.visit('/');
-        cy.on('uncaught:exception',(err,runnable)=>{
-            return false
-        })
-    })
-
-    it('fills the user details to sign in',function(){
-        cy.visit('/');
-        cy.get('input[name="username"]').type('dumm')
-        cy.get('input[name="password"]').type('dumm')
-        cy.contains('Sign in').click();
-        cy.on('uncaught:exception',(err,runnable)=>{
-            return false
-        })
-        //cy.screenshot();
-    })
-    it('Lets make this user a member',function(){
-        cy.get('[alt="Member"]').click()
-        cy.on('uncaught:exception',(err,runnable)=>{
-            return false
-        })
-    })
-})
-
 
 
 
